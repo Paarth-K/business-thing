@@ -10,14 +10,15 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.4.2",
-    "sass": "^1.62.0",
-    "sass-loader": "^13.2.2",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.7"
+    "nuxt": "^3.4.2",
+    "prettier": "^2.8.7",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2"
   },
   "dependencies": {
+    "primeflex": "^3.3.0",
     "primevue": "^3.27.0"
   }
 }

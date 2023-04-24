@@ -2920,7 +2920,7 @@ nuxi@3.4.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt@^3.4.1:
+nuxt@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.4.2.tgz#d5238373df8132b568ddee7e5fc251e7ede1a895"
   integrity sha512-4v+oeBL4ZI8nHzF0Dm1p5kF9VCNlzrpvOt7wu3BnmzlueXsu4A/LfmFvpfZLxws+r5U74eM5Ut/LMD8B8LrZIw==
@@ -3401,6 +3401,11 @@ pretty-bytes@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-6.1.0.tgz#1d1cc9aae1939012c74180b679da6684616bf804"
   integrity sha512-Rk753HI8f4uivXi4ZCIYdhmG1V+WKzvRMg/X+M42a6t7D07RcmopXJMDNk6N++7Bl75URRGsb40ruvg7Hcp2wQ==
+
+primeflex@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.3.0.tgz#6c755230ddf30c8fffed9f817efed28d5fe2bdff"
+  integrity sha512-4hvyIO7lERN5bnyURn67Qpozghins8Jq/GSXO6tymc3oa2ADHWuiYBti8ZptPwHu+uD/HTEisS26NEmeIGfPZQ==
 
 primevue@^3.27.0:
   version "3.27.0"
