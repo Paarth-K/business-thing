@@ -4,6 +4,12 @@
   font-family: Avenir;
   --primary-color: rgb(129, 100, 217);
   --primary-color-hover: rgb(102, 79, 172);
+  --danger-color: rgb(230, 15, 15);
+  --danger-color-hover: rgb(213, 16, 16);
+  --info-color: rgb(15, 140, 230);
+  --info-color-hover: rgb(13, 118, 193);
+  --success-color: rgb(11, 211, 98);
+  --success-color-hover: rgb(9, 167, 77);
 }
 
 p,

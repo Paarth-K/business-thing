@@ -7,5 +7,8 @@ import "./components/Button.vue";
 <template>
   <div>
     <Button title="hello world" type="primary"></Button>
+    <Button title="hello world" type="danger"></Button>
+    <Button title="hello world" type="info"></Button>
+    <Button title="hello world" type="success"></Button>
   </div>
 </template>
