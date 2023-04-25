@@ -1,35 +1,14 @@
-# Nuxt 3 Minimal Starter
+# For Paarth and Dev
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Please add any major things you add over here in the README.md file.
 
-## Setup
+## CSS ROOT
 
-Make sure to install the dependencies:
+The root CSS file is now App.css. Here, you can configure the default font, primary color(s) and more you want to add.
 
-```bash
-# yarn
-yarn install
+I have added 4 colors:
 
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Primary (Purple) (pls change it to something cool)
+- Danger (red)
+- Success (green)
+- Info (blue)
