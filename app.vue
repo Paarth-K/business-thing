@@ -5,7 +5,5 @@ import "./components/FillUpText.vue";
 </script>
 
 <template>
-  <div>
-    <FillUpText text="Hello World"></FillUpText>
-  </div>
+  <NuxtPage></NuxtPage>
 </template>

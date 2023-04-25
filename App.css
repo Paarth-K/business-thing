@@ -1,7 +1,6 @@
-:root {
+html {
   /* i just added the default vue font */
   /* change it if you want */
-  font-family: Avenir;
   --primary-color: rgb(129, 100, 217);
   --primary-color-hover: rgb(102, 79, 172);
   --danger-color: rgb(230, 15, 15);
@@ -10,6 +9,11 @@
   --info-color-hover: rgb(13, 118, 193);
   --success-color: rgb(11, 211, 98);
   --success-color-hover: rgb(9, 167, 77);
+  margin: 0;
+}
+
+body {
+  margin: 0 !important;
 }
 
 p,
