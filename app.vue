@@ -1,9 +1,11 @@
 <script setup>
 import "/node_modules/primeflex/primeflex.css";
+import "./App.css";
+import "./components/Button.vue";
 </script>
 
 <template>
   <div>
-    <p class="text-orange-500">hi</p>
+    <Button title="hello world"></Button>
   </div>
 </template>
