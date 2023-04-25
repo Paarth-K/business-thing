@@ -6,6 +6,6 @@ import "./components/Button.vue";
 
 <template>
   <div>
-    <Button title="hello world"></Button>
+    <Button title="hello world" type="primary"></Button>
   </div>
 </template>

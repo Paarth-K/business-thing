@@ -2,4 +2,18 @@
   /* i just added the default vue font */
   /* change it if you want */
   font-family: Avenir;
+  --primary-color: rgb(129, 100, 217);
+  --primary-color-hover: rgb(102, 79, 172);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+div {
+  font-family: Avenir;
 }

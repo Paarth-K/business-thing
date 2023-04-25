@@ -10,13 +10,40 @@ export default {
 </script>
 
 <template>
-  <p @click="onClick" class="button" :disabled="disabled">{{ title }}</p>
+  <button
+    @click="onClick"
+    :class="'button ' + (type ? type : '')"
+    :disabled="disabled"
+  >
+    {{ title }}
+  </button>
 </template>
 
 <style scoped>
 .button {
-  padding: 8px;
-  background-color: rgb(64, 0, 255);
+  display: inline-block;
+  padding: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.button.primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.button.primary {
+  background-color: var(--primary-color);
   color: white;
 }
 </style>
