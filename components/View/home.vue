@@ -10,6 +10,7 @@
       ></base-Button>
     </div>
     <home-SideBackground />
+    <cursor-trailer></cursor-trailer>
   </div>
 </template>
 <style scoped>
@@ -21,7 +22,6 @@
   background-color: #0e031d;
   display: flex;
   align-items: center;
-  cursor: url("/cursor.png"), auto;
 }
 
 .text {

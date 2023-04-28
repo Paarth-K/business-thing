@@ -8,3 +8,9 @@
     <NuxtPage></NuxtPage>
   </div>
 </template>
+
+<style>
+* {
+  cursor: none;
+}
+</style>
