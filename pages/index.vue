@@ -26,9 +26,21 @@
 
 .text {
   margin-left: 5vw;
+  margin-top: 0;
+  animation: come-in-top 0.5s ease-in;
 }
 
 #mt {
   margin-top: 2vh;
+}
+
+@keyframes come-in-top {
+  0% {
+    margin-top: -5%;
+  }
+
+  100% {
+    margin-top: 0;
+  }
 }
 </style>

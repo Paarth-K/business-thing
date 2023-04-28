@@ -81,10 +81,12 @@ onMounted(() => {
   transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
   transition: all 0.5s;
   box-shadow: 4px 4px #676767;
+  animation: drawn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .card:hover {
   background-color: #cfcfcf;
+  box-shadow: 5px 5px #3b3b3b;
 }
 
 .card-1 {
@@ -98,5 +100,17 @@ onMounted(() => {
 .card-3 {
   top: 60%;
   right: 27%;
+}
+
+@keyframes drawn {
+  0% {
+    width: 0vw;
+    height: 0vh;
+  }
+
+  100% {
+    width: 22vw;
+    height: 35vh;
+  }
 }
 </style>

@@ -9,8 +9,8 @@ html {
   --info-color-hover: rgb(13, 118, 193);
   --success-color: rgb(11, 211, 98);
   --success-color-hover: rgb(9, 167, 77);
-  --rotateX: 20deg;
-  --rotateY: 20deg;
+  --rotateX: 0deg;
+  --rotateY: 0deg;
   margin: 0;
 }
 
