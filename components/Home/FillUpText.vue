@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="interactable">
     <h1 :data-text="text">{{ text }}</h1>
   </div>
 </template>
