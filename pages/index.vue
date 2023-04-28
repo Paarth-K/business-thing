@@ -9,6 +9,7 @@
         disabled="false"
       ></Button>
     </div>
+    <SideBackground />
   </div>
 </template>
 <style scoped>
