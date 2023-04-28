@@ -19,7 +19,8 @@ export default {
 <template>
   <button
     @click="onClick"
-    :class="'button ' + (color ? color : '')"
+    class="button"
+    :class="color ? color : ''"
     :disabled="disabled"
     :id="id"
   >

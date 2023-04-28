@@ -8,7 +8,9 @@ export default {
 </script>
 
 <template>
-  <h1 :data-text="text">{{ text }}</h1>
+  <div>
+    <h1 :data-text="text">{{ text }}</h1>
+  </div>
 </template>
 
 <style scoped>
