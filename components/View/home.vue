@@ -10,7 +10,7 @@
       ></base-Button>
     </div>
     <home-SideBackground />
-    <cursor-trailer></cursor-trailer>
+    <client-only> <cursor-trailer></cursor-trailer></client-only>
   </div>
 </template>
 <style scoped>

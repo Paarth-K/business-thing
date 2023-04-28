@@ -1,7 +1,7 @@
 <template>
-  <div id="trailer"></div>
+  <div id="trailer" :class="waitforloadcursor"></div>
 </template>
-<style lang="css">
+<style>
 #trailer {
   height: 20px;
   width: 20px;
@@ -9,12 +9,12 @@
   border-radius: 20px;
 
   position: fixed;
-  left: 0px;
-  top: 0px;
+  left: 50vw;
+  top: 50vh;
   z-index: 10000;
 
   pointer-events: none;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 500ms ease;
 
   display: grid;
@@ -31,23 +31,16 @@ onMounted(() => {
       y = e.clientY - trailer.offsetHeight / 2;
 
     const keyframes = {
-      transform: `translate(${x}px, ${y}px) scale(${interacting ? 2 : 1})`,
+      transform: `scale(${interacting ? 2 : 1})`,
+      left: `${x}px`,
+      top: `${y}px`,
       opacity: `${interacting ? 0.3 : 1}`,
     };
 
     trailer.animate(keyframes, {
-      duration: 800,
+      duration: 200,
       fill: "forwards",
     });
-  };
-
-  const getTrailerClass = (type) => {
-    switch (type) {
-      case "video":
-        return "fa-solid fa-play";
-      default:
-        return "fa-solid fa-arrow-up-right";
-    }
   };
 
   window.onmousemove = (e) => {
