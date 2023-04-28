@@ -2,6 +2,7 @@
 export default {
   props: {
     text: "Hello world",
+    className: "",
   },
 };
 </script>
@@ -14,9 +15,11 @@ export default {
 h1 {
   color: orange;
   font-size: 3rem;
-  position: absolute;
+  position: relative;
   margin: 0;
   padding: 0;
+  width: 40vw;
+  white-space: wrap;
 }
 
 h1::before {
@@ -24,7 +27,7 @@ h1::before {
   position: absolute;
   top: 0;
   left: 0;
-  color: black;
+  color: rgb(255, 255, 255);
   overflow: hidden;
   height: 100%;
   transition: all 0.5s;

@@ -4,12 +4,13 @@ export default {
     title: "",
     disabled: false,
     onClick: () => {},
-    type: "primary",
+    color: "primary",
+    id: "",
   },
 };
 </script>
 
-<!-- The four button types are: -->
+<!-- The four button colors are: -->
 <!-- Primary -->
 <!-- ! Danger -->
 <!-- ? Info -->
@@ -18,8 +19,9 @@ export default {
 <template>
   <button
     @click="onClick"
-    :class="'button ' + (type ? type : '')"
+    :class="'button ' + (color ? color : '')"
     :disabled="disabled"
+    :id="id"
   >
     {{ title }}
   </button>
@@ -29,29 +31,20 @@ export default {
 .button {
   display: inline-block;
   padding: 14px;
-  border-radius: 4px;
+  border-radius: 24px;
   border: none;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-
-.button {
-  display: inline-block;
-  padding: 14px;
-  border-radius: 4px;
-  margin: 8px;
-  border: none;
-  cursor: pointer;
+  text-transform: uppercase;
   transition: all 0.25s;
 }
 
 .button.primary {
-  background-color: var(--primary-color);
+  border: 1px solid white;
   color: white;
 }
 
 .button.primary:hover {
-  background-color: var(--primary-color-hover);
+  background-color: #fff;
+  color: #000;
 }
 
 .button.danger {
@@ -77,7 +70,7 @@ export default {
   color: white;
 }
 
-.button.primary:hover {
-  background-color: var(--primary-color-hover);
+.button.success:hover {
+  background-color: var(--success-color-hover);
 }
 </style>
