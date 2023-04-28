@@ -11,10 +11,6 @@ export default {
   <h1 :data-text="text">{{ text }}</h1>
 </template>
 
-<template>
-  <h1 :data-text="text">{{ text }}</h1>
-</template>
-
 <style scoped>
 h1 {
   color: orange;
