@@ -1,7 +1,5 @@
 <script setup>
-import "/node_modules/primeflex/primeflex.css";
-import "primeicons/primeicons.css";
-import "./App.scss";
+// moved imports to nuxt.config.ts
 </script>
 
 <template>
