@@ -1,5 +1,5 @@
 <template>
-  <div id="trailer" :class="waitforloadcursor"></div>
+  <div id="trailer"></div>
 </template>
 <style>
 #trailer {
@@ -20,13 +20,20 @@
   display: grid;
   place-items: center;
 }
+.interactable {
+  transition: all 0.5s;
+}
+.interactable:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+}
 </style>
 
 <script setup>
 onMounted(() => {
   const trailer = document.getElementById("trailer");
-
-  const animateTrailer = (e, interacting, thing) => {
+  var pastThing = null;
+  const animateTrailer = (e, interacting, thing = null) => {
     const x = e.clientX - trailer.offsetWidth / 2,
       y = e.clientY - trailer.offsetHeight / 2;
 
@@ -36,19 +43,25 @@ onMounted(() => {
       top: `${y}px`,
       opacity: `${interacting ? 0.3 : 1}`,
     };
-    const thingettinghoveredAnim = {
-      position: "fixed",
-      left: `${x}px`,
-      top: `${y}px`,
-    };
     trailer.animate(keyframes, {
       duration: 200,
       fill: "forwards",
     });
-    thing.animate(thingettinghoveredAnim, {
-      duration: 100,
-      fill: "forwards",
-    });
+    // if (thing) {
+    //   // pastThing = thing;
+    //   if (!pastThing || pastThing !== thing) {
+    //     console.log(pastThing, thing);
+    //     const thingettinghoveredAnim = {
+    //       transform: `translate(${
+    //         interacting ? ("5px", "5px") : ("0px", "0px")
+    //       })`,
+    //     };
+    //     thing.animate(thingettinghoveredAnim, {
+    //       duration: 1000,
+    //       fill: "forwards",
+    //     });
+    //   }
+    // }
   };
 
   window.onmousemove = (e) => {
