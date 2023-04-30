@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div id="site-logo">BussinWebsitefr</div>
     <nav-link
       class="nav-links interactable"
       v-for="data in navLinkData"
@@ -35,5 +36,12 @@ export default {
   height: auto;
   text-align: right;
   padding: 7px;
+}
+#site-logo {
+  padding: 10px;
+  float: left;
+  color: white;
+  text-align: center;
+  font-size: 25px;
 }
 </style>
