@@ -4,6 +4,7 @@
       class="nav-links interactable"
       v-for="data in navLinkData"
       :to="data.to"
+      :key="data"
       >{{ data.display }}</nav-link
     >
   </div>
