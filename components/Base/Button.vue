@@ -6,26 +6,21 @@ export default {
     onClick: () => {},
     color: "primary",
     id: "",
+    to: "",
   },
 };
 </script>
 
-<!-- The four button colors are: -->
-<!-- Primary -->
-<!-- ! Danger -->
-<!-- ? Info -->
-<!-- * Success -->
-
 <template>
-  <button
-    @click="onClick"
+  <div
+    @click="!disabled ? onClick : () => {}"
     class="button"
     :class="color ? color : ''"
-    :disabled="disabled"
+    :data-disabled="disabled"
     :id="id"
   >
     {{ title }}
-  </button>
+  </div>
 </template>
 
 <style scoped>
@@ -33,9 +28,15 @@ export default {
   display: inline-block;
   padding: 14px;
   border-radius: 24px;
+  font-size: 14px;
   border: none;
   text-transform: uppercase;
   transition: all 0.25s;
+}
+
+.button[data-disabled="true"] {
+  border: 1px solid grey;
+  color: grey;
 }
 
 .button.primary {
