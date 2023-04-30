@@ -1,7 +1,7 @@
 <template>
   <div id="trailer"></div>
 </template>
-<style>
+<style lang="scss">
 #trailer {
   height: 20px;
   width: 20px;
@@ -23,9 +23,10 @@
 .interactable {
   transition: all 0.5s;
 }
+
 .interactable:hover {
   transition: all 0.5s ease;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 </style>
 
@@ -38,13 +39,13 @@ onMounted(() => {
       y = e.clientY - trailer.offsetHeight / 2;
 
     const keyframes = {
-      transform: `scale(${interacting ? 2 : 1})`,
+      transform: `scale(${interacting ? 3 : 1})`,
       left: `${x}px`,
       top: `${y}px`,
-      opacity: `${interacting ? 0.3 : 1}`,
+      opacity: `${interacting ? 0 : 1}`,
     };
     trailer.animate(keyframes, {
-      duration: 200,
+      duration: 170,
       fill: "forwards",
     });
     // if (thing) {

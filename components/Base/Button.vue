@@ -14,7 +14,7 @@ export default {
 <template>
   <div
     @click="!disabled ? onClick : () => {}"
-    class="button"
+    class="button interactable"
     :class="color ? color : ''"
     :data-disabled="disabled"
     :id="id"
