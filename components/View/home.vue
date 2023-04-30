@@ -1,4 +1,5 @@
 <template>
+  <nav-bar></nav-bar>
   <div class="page-wrapper">
     <div class="text">
       <home-FillUpText text="Easy and affordable web design."></home-FillUpText>
