@@ -26,7 +26,7 @@
 onMounted(() => {
   const trailer = document.getElementById("trailer");
 
-  const animateTrailer = (e, interacting) => {
+  const animateTrailer = (e, interacting, thing) => {
     const x = e.clientX - trailer.offsetWidth / 2,
       y = e.clientY - trailer.offsetHeight / 2;
 
@@ -36,9 +36,17 @@ onMounted(() => {
       top: `${y}px`,
       opacity: `${interacting ? 0.3 : 1}`,
     };
-
+    const thingettinghoveredAnim = {
+      position: "fixed",
+      left: `${x}px`,
+      top: `${y}px`,
+    };
     trailer.animate(keyframes, {
       duration: 200,
+      fill: "forwards",
+    });
+    thing.animate(thingettinghoveredAnim, {
+      duration: 100,
       fill: "forwards",
     });
   };
@@ -47,7 +55,7 @@ onMounted(() => {
     const interactable = e.target.closest(".interactable"),
       interacting = interactable !== null;
 
-    animateTrailer(e, interacting);
+    animateTrailer(e, interacting, interactable);
   };
 });
 </script>
