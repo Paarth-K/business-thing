@@ -1,18 +1,14 @@
 <template>
-  <nav-bar></nav-bar>
-  <div class="page-wrapper">
-    <div class="text">
-      <home-FillUpText text="Easy and affordable web design."></home-FillUpText>
-      <base-Button
-        id="mt"
-        title="check it out"
-        color="primary"
-        disabled="false"
-      ></base-Button>
-    </div>
-    <home-SideBackground />
-    <client-only> <cursor-trailer></cursor-trailer></client-only>
+  <div class="text">
+    <home-FillUpText text="Easy and affordable web design."></home-FillUpText>
+    <base-Button
+      id="mt"
+      title="check it out"
+      color="primary"
+      disabled="false"
+    ></base-Button>
   </div>
+  <home-SideBackground />
 </template>
 <style scoped>
 .page-wrapper {

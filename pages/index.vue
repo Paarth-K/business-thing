@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <view-home></view-home>
-  </div>
+  <view-home></view-home>
 </template>
