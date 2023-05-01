@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <!-- div because we need a root level component (above nuxt page) otherwise nuxt messes routing up. -->
-  <div>
+  <NuxtLayout>
     <NuxtPage></NuxtPage>
-  </div>
+  </NuxtLayout>
 </template>
