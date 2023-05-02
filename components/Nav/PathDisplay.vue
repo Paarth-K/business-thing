@@ -6,6 +6,7 @@
         id="about"
         :home="home"
         :model="items"
+        class="interactable"
       ></bread-crumb
     ></transition>
   </div>
@@ -44,26 +45,31 @@ watch(route, () => {
 </script>
 <style>
 .breadcrumb {
-  position: absolute;
-  left: 20%;
-  top: 50%;
+  position: fixed;
   transform: scale(0.7);
   opacity: 1;
+  bottom: 3%;
+  right: 0px;
 }
 .p-menuitem-text,
 .p-menuitem-icon {
   color: white !important;
 }
+.p-menuitem-text:hover,
+.p-menuitem-icon:hover {
+  transform: scale(1.1);
+}
+
 .p-icon {
   color: lightgrey;
 }
 
 .p-breadcrumb {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--primary-color-hover);
 }
 .breadcrumb-enter-active,
 .breadcrumb-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease;
 }
 
 .breadcrumb-enter-from,

@@ -5,6 +5,7 @@
       <slot />
     </div>
     <client-only> <cursor-trailer></cursor-trailer></client-only>
+    <client-only><nav-path-display></nav-path-display></client-only>
   </div>
 </template>
 <style scoped>

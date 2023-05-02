@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div id="site-logo">BussinWebsitefr</div>
+    <div id="site-logo">Logo</div>
     <nav-link
       class="nav-links interactable"
       v-for="data in navLinkData"
