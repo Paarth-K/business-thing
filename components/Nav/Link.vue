@@ -28,6 +28,9 @@ export default {
   border: 1px lightcoral dashed;
 }
 
+.nav-link-container:hover button {
+  filter: invert();
+}
 button {
   /* filter: invert(); */
   display: inline-block;
@@ -36,9 +39,6 @@ button {
   border: none;
   text-transform: uppercase;
   transition: all 0.25s;
-}
-
-button:hover {
-  filter: invert();
+  pointer-events: none;
 }
 </style>
