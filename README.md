@@ -1,5 +1,3 @@
-# For Paarth and Dev
-
 Please add any major things you add over here in the README.md file.
 
 ## COMMIT LINT
@@ -18,3 +16,6 @@ I have added 4 colors:
 - Danger (red)
 - Success (green)
 - Info (blue)
+
+## Nuxt Devtools Enabled
+https://devtools.nuxtjs.org/guide/features
