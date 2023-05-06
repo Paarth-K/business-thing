@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/image-edge"],
+
   css: [
     "primevue/resources/themes/lara-light-indigo/theme.css",
     "primevue/resources/primevue.min.css",
@@ -12,5 +13,10 @@ export default defineNuxtConfig({
   build: {
     transpile: ["primevue"],
   },
+
   image: {},
+
+  devtools: {
+    enabled: true
+  }
 });
