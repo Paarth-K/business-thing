@@ -20,14 +20,12 @@ const route = useRoute();
 
 const items = ref([]);
 const showBread = ref(false);
+
 onMounted(() => {
   updateRoute();
 });
 function updateRoute() {
-  const currentRoute = route.fullPath.split("/");
-  if (currentRoute[0] == "") {
-    currentRoute.shift();
-  }
+  const currentRoute = route.fullPath.split("/").filter((e) => e !== "");
   items.value = [];
   currentRoute.forEach(function (item, index) {
     items.value.push({ label: item });
@@ -38,9 +36,11 @@ watch(route, () => {
   setTimeout(() => {
     showBread.value = true;
   }, 300);
-  setTimeout(() => {
-    showBread.value = false;
-  }, 2300);
+  if (showBread) {
+    setTimeout(() => {
+      showBread.value = false;
+    }, 2300);
+  }
 });
 </script>
 <style>
