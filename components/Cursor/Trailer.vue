@@ -7,7 +7,7 @@
   width: 20px;
   background-color: white;
   border-radius: 20px;
-
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 0.2);
   position: fixed;
   left: 50vw;
   top: 50vh;
