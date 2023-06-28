@@ -36,7 +36,9 @@ export default {
   height: auto;
   text-align: right;
   padding: 7px;
+  z-index: 2;
 }
+
 #site-logo {
   padding: 10px;
   float: left;

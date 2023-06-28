@@ -1,65 +1,19 @@
-<script setup>
-onMounted(() => {
-  const card1 = document.querySelector(".card-1");
-  const card2 = document.querySelector(".card-2");
-  const card3 = document.querySelector(".card-3");
-
-  document.addEventListener("mousemove", (e) => {
-    rotateCard(e);
-  });
-
-  const rotateCard = (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    const middleY1 =
-      (card1.getBoundingClientRect().top +
-        card1.getBoundingClientRect().bottom) /
-      2;
-    const middleX1 =
-      (card1.getBoundingClientRect().left +
-        card1.getBoundingClientRect().right) /
-      2;
-    const middleY2 =
-      (card2.getBoundingClientRect().top +
-        card2.getBoundingClientRect().bottom) /
-      2;
-    const middleX2 =
-      (card2.getBoundingClientRect().left +
-        card2.getBoundingClientRect().right) /
-      2;
-    const middleY3 =
-      (card3.getBoundingClientRect().top +
-        card3.getBoundingClientRect().bottom) /
-      2;
-    const middleX3 =
-      (card3.getBoundingClientRect().left +
-        card3.getBoundingClientRect().right) /
-      2;
-
-    const offsetX1 = ((mouseX - middleX1) / middleX1) * 30;
-    const offsetY1 = ((mouseY - middleY1) / middleY1) * 10;
-    const offsetX2 = ((mouseX - middleX2) / middleX2) * 30;
-    const offsetY2 = ((mouseY - middleY2) / middleY2) * 30;
-    const offsetX3 = ((mouseX - middleX3) / middleX3) * 30;
-    const offsetY3 = ((mouseY - middleY3) / middleY3) * 30;
-
-    card1.style.setProperty("--rotateX", -1 * offsetY1 + "deg");
-    card1.style.setProperty("--rotateY", offsetX1 + "deg");
-    card2.style.setProperty("--rotateX", -1 * offsetY2 + "deg");
-    card2.style.setProperty("--rotateY", offsetX2 + "deg");
-    card3.style.setProperty("--rotateX", -1 * offsetY3 + "deg");
-    card3.style.setProperty("--rotateY", offsetX3 + "deg");
-  };
-});
-</script>
+<script setup></script>
 
 <template>
   <div class="wrapper">
-    <div class="cards">
-      <div class="card card-1"></div>
-      <div class="card card-2"></div>
-      <div class="card card-3"></div>
+    <div class="card">
+      <div class="title-container">
+        <p class="title">What we do</p>
+        <span class="icon">?</span>
+      </div>
+      <p class="content">We make custom websites for our clients.</p>
+      <base-Button
+        id="mt"
+        title="check it out"
+        color="primary"
+        disabled="false"
+      ></base-Button>
     </div>
   </div>
 </template>
@@ -71,46 +25,73 @@ onMounted(() => {
 }
 
 .card {
-  background-color: #ece3e3;
-  width: 22vw;
-  height: 35vh;
-  border-radius: 8px;
+  width: 30vw;
+  height: 20vh;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(rgb(135, 173, 239), rgb(154, 135, 239));
+  border-radius: 16px;
   position: absolute;
-  transform-style: preserve-3d;
-  border: 1px dashed #717171;
-  transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+  right: 10%;
+  top: 10%;
   transition: all 0.5s;
-  box-shadow: 4px 4px #676767;
-  animation: drawn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card:hover {
-  background-color: #cfcfcf;
-  box-shadow: 5px 5px #3b3b3b;
+.card::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgb(135, 173, 239), rgb(154, 135, 239));
+  transition: all 0.5s;
 }
 
-.card-1 {
-  top: 5%;
-  right: 27%;
-}
-.card-2 {
-  top: 30%;
-  right: 2%;
-}
-.card-3 {
-  top: 60%;
-  right: 27%;
+.card:hover::after {
+  height: 100%;
 }
 
-@keyframes drawn {
-  0% {
-    width: 0vw;
-    height: 0vh;
-  }
+.card .title-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
-  100% {
-    width: 22vw;
-    height: 35vh;
-  }
+.card .title {
+  color: rgb(135, 173, 239);
+  font-weight: bold;
+  padding-left: 16px;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+
+.card .icon {
+  color: rgb(135, 173, 239);
+  padding: 16px;
+  font-weight: bold;
+}
+
+.card .content {
+  color: rgb(135, 173, 239);
+  padding-left: 16px;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+
+.card .button {
+  z-index: 2;
+  position: absolute;
+  top: 38%;
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: all 0.5s;
+}
+
+.card:hover .button {
+  opacity: 1;
 }
 </style>

@@ -21,7 +21,7 @@ export default {
   list-style-type: none;
   text-align: center;
   margin-left: 17px;
-  border-radius: 30px;
+  border-radius: 12px;
   border: 1px dashed;
 }
 .nav-link-container:hover {
@@ -32,7 +32,8 @@ button {
   /* filter: invert(); */
   display: inline-block;
   padding: 14px;
-  border-radius: 30px;
+  border-radius: 12px;
+
   border: none;
   text-transform: uppercase;
   transition: all 0.25s;

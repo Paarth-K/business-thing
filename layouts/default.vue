@@ -12,9 +12,10 @@
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0e031d;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 </style>

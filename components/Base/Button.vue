@@ -27,7 +27,7 @@ export default {
 .button {
   display: inline-block;
   padding: 14px;
-  border-radius: 24px;
+  border-radius: 12px;
   font-size: 14px;
   border: none;
   text-transform: uppercase;

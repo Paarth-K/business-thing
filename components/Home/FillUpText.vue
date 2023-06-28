@@ -1,6 +1,7 @@
 <script>
 export default {
   props: {
+    normalText: "",
     text: "Hello world",
     className: "",
   },
@@ -8,14 +9,17 @@ export default {
 </script>
 
 <template>
-  <div class="interactable">
-    <h1 :data-text="text">{{ text }}</h1>
+  <div>
+    <h1>
+      {{ normalText }}
+      <span class="interactable" :data-text="text">{{ text }}</span>
+    </h1>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  color: orange;
+  color: white;
   font-size: 3rem;
   position: relative;
   margin: 0;
@@ -24,18 +28,18 @@ h1 {
   white-space: wrap;
 }
 
-h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  height: 100%;
-  transition: all 0.5s;
+span:hover {
+  color: rgb(70, 138, 255);
 }
 
-h1:hover::before {
-  height: 0%;
+span {
+  color: rgb(135, 173, 239);
+  font-size: 3rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 40vw;
+  white-space: wrap;
+  transition: 0.5s;
 }
 </style>
