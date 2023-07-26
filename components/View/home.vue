@@ -1,29 +1,35 @@
 <template>
-  <div class="text">
-    <home-FillUpText text="Easy and affordable web design."></home-FillUpText>
-    <base-Button
-      id="mt"
-      title="check it out"
-      color="primary"
-      disabled="false"
-    ></base-Button>
+  <div class="home-container">
+    <div class="page page-1">
+      <div class="text">
+        <home-FillUpText
+          normalText="We bring your ideas "
+          text="to the world"
+        ></home-FillUpText>
+      </div>
+    </div>
+    <div class="page page-2">
+      <home-Cards></home-Cards>
+    </div>
+    <div class="page page-3">
+      <home-Contact></home-Contact>
+    </div>
   </div>
-  <home-SideBackground />
 </template>
 <style scoped>
-.page-wrapper {
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0e031d;
+.page-1 {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
+.page {
+  width: calc(100vw - 14px);
+  height: 100vh;
+}
+
 .text {
-  margin-left: 5vw;
-  margin-top: 0;
+  text-align: center;
   animation: come-in-top 0.5s ease-in;
 }
 
@@ -39,5 +45,11 @@
   100% {
     margin-top: 0;
   }
+}
+
+.page-3 {
+  border: 3px solid;
+  border-image-source: linear-gradient(#ff0000, #d44808);
+  border-image-slice: 1;
 }
 </style>

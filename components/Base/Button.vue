@@ -27,7 +27,7 @@ export default {
 .button {
   display: inline-block;
   padding: 14px;
-  border-radius: 24px;
+  border-radius: 12px;
   font-size: 14px;
   border: none;
   text-transform: uppercase;
@@ -47,32 +47,5 @@ export default {
 .button.primary:hover {
   background-color: #fff;
   color: #000;
-}
-
-.button.danger {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.button.danger:hover {
-  background-color: var(--danger-color-hover);
-}
-
-.button.info {
-  background-color: var(--info-color);
-  color: white;
-}
-
-.button.info:hover {
-  background-color: var(--info-color-hover);
-}
-
-.button.success {
-  background-color: var(--success-color);
-  color: white;
-}
-
-.button.success:hover {
-  background-color: var(--success-color-hover);
 }
 </style>
