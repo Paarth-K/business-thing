@@ -48,31 +48,4 @@ export default {
   background-color: #fff;
   color: #000;
 }
-
-.button.danger {
-  background-color: var(--danger-color);
-  color: white;
-}
-
-.button.danger:hover {
-  background-color: var(--danger-color-hover);
-}
-
-.button.info {
-  background-color: var(--info-color);
-  color: white;
-}
-
-.button.info:hover {
-  background-color: var(--info-color-hover);
-}
-
-.button.success {
-  background-color: var(--success-color);
-  color: white;
-}
-
-.button.success:hover {
-  background-color: var(--success-color-hover);
-}
 </style>

@@ -6,13 +6,13 @@
           normalText="We bring your ideas "
           text="to the world"
         ></home-FillUpText>
-        <base-Button
-          id="mt"
-          title="check it out"
-          color="primary"
-          disabled="false"
-        ></base-Button>
       </div>
+    </div>
+    <div class="page page-2">
+      <home-Cards></home-Cards>
+    </div>
+    <div class="page page-3">
+      <home-Contact></home-Contact>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@
 }
 
 .page {
-  width: 100vw;
+  width: calc(100vw - 14px);
   height: 100vh;
 }
 
@@ -45,5 +45,11 @@
   100% {
     margin-top: 0;
   }
+}
+
+.page-3 {
+  border: 3px solid;
+  border-image-source: linear-gradient(#ff0000, #d44808);
+  border-image-slice: 1;
 }
 </style>

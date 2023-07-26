@@ -11,7 +11,7 @@ export default {
 <template>
   <div>
     <h1>
-      {{ normalText }}
+      {{ normalText }}<br />
       <span class="interactable" :data-text="text">{{ text }}</span>
     </h1>
   </div>
@@ -20,26 +20,37 @@ export default {
 <style scoped>
 h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 5rem;
   position: relative;
   margin: 0;
   padding: 0;
-  width: 40vw;
+  width: calc(100vw - 14px);
   white-space: wrap;
 }
 
-span:hover {
-  color: rgb(70, 138, 255);
+@keyframes change-color {
+  0% {
+    color: rgb(135, 173, 239);
+  }
+
+  50% {
+    color: rgb(135, 239, 190);
+  }
+
+  100% {
+    color: rgb(135, 173, 239);
+  }
 }
 
 span {
   color: rgb(135, 173, 239);
-  font-size: 3rem;
+  font-size: 5rem;
   position: relative;
   margin: 0;
   padding: 0;
   width: 40vw;
   white-space: wrap;
-  transition: 0.5s;
+  transition: 1s;
+  animation: change-color 10s infinite linear;
 }
 </style>
