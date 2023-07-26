@@ -1,16 +1,12 @@
 <template>
-  <div class="nav-link-container">
-    <nuxt-link :href="to">
-      <button>
-        <slot />
-      </button>
-    </nuxt-link>
-  </div>
+  <nuxt-link :href="to"
+    ><p class="link">{{ text }}</p>
+  </nuxt-link>
 </template>
 
 <script>
 export default {
-  props: ["to"],
+  props: ["to", "text"],
 };
 </script>
 
@@ -28,17 +24,18 @@ export default {
   border: 1px lightcoral dashed;
 }
 
-.nav-link-container:hover button {
-  filter: invert();
-}
 button {
   /* filter: invert(); */
   display: inline-block;
   padding: 14px;
-  border-radius: 30px;
+  border-radius: 12px;
+
   border: none;
   text-transform: uppercase;
   transition: all 0.25s;
-  pointer-events: none;
+}
+
+button:hover {
+  filter: invert();
 }
 </style>
