@@ -6,6 +6,8 @@
   <NuxtLayout>
     <NuxtPage></NuxtPage>
   </NuxtLayout>
+  <client-only> <cursor-trailer></cursor-trailer></client-only>
+  <client-only><nav-path-display></nav-path-display></client-only>
 </template>
 
 <style>

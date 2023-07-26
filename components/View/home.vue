@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="page page-2">
-      <home-Cards></home-Cards>
+      <home-Cards id="about"></home-Cards>
     </div>
     <div class="page page-3">
       <home-Contact></home-Contact>
