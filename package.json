@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "business-app",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -17,7 +17,6 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "nuxt": "^3.4.3",
     "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
@@ -25,9 +24,14 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.1.0",
+    "eslint": "7.28.0",
+    "nuxt": "^3.6.5",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
-    "primevue": "^3.27.0"
+    "primevue": "^3.27.0",
+    "vite": "^4.4.7",
+    "vue": "^3.3.4",
+    "webpack": "^5.88.2"
   },
   "browserslist": [
     ">0.3%",
