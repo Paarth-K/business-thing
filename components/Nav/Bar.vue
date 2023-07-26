@@ -2,7 +2,7 @@
   <div class="container">
     <div id="site-logo">Website</div>
     <div class="links">
-      <nav-link class="nav-link" to="/about" text="About"></nav-link>
+      <nav-link class="nav-link" to="#about" text="About"></nav-link>
       <nav-link class="nav-link" to="/pricing" text="Pricing"></nav-link>
     </div>
   </div>

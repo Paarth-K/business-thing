@@ -5,7 +5,6 @@
       <slot />
       <base-ScrollUp></base-ScrollUp>
     </div>
-    <client-only> <cursor-trailer></cursor-trailer></client-only>
   </div>
 </template>
 <style scoped>
