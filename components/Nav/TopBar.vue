@@ -4,13 +4,34 @@
     <div class="links">
       <nav-link class="nav-link" to="/about" text="About"></nav-link>
       <nav-link class="nav-link" to="/pricing" text="Pricing"></nav-link>
+      <nav-link class="nav-link" to="/pricing" text="Our Team"></nav-link>
+      <nav-link class="nav-link" to="/contact" text="Contact"></nav-link>
     </div>
+    <span className="icon pi pi-bars" @click="openSidebar"></span>
   </div>
 </template>
 
-<script></script>
+<script>  
+
+export default {
+  name: 'Header',
+  methods: {
+    openSidebar() {
+      this.$emit('open-sidebar');
+    }
+  }
+}
+</script>
 
 <style scoped>
+.container .icon {
+  display: none;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.25s;
+  margin-right: 16px;
+  cursor: pointer;
+}
 .container {
   background-color: #0e031d;
   width: calc(100vw - 14px);
@@ -62,5 +83,20 @@
 
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+@media (max-width: 800px) {
+  .container .icon {
+    display: block;
+    color: #fff;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .container .icon:hover {
+    background-color: gray;
+  }
 }
 </style>
