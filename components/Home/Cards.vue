@@ -3,6 +3,7 @@ window.addEventListener(
   "scroll",
   () => {
     if (window.scrollY > 400) {
+      
       document.querySelector(".card").classList.add("show");
       document.querySelector(".card-2").classList.add("show");
       document.querySelector(".wrapper").classList.add("show");
