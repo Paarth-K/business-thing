@@ -1,4 +1,4 @@
-<template>
+lea<template>
   <div>
     <nav-bar></nav-bar>
     <div class="page-wrapper">
